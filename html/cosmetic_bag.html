@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ідеал твоєї краси</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="shortcut icon" href="http://faviconka.ru/ico/faviconka_ru_1124.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="cart-box anime">
+        <div class="title-cart">
+            <p>Ваш кошик</p>
+            <svg id="next" viewBox="0 0 448.011 448.011" xml:space="preserve">
+                <path d="M438.731,209.463l-416-192c-6.624-3.008-14.528-1.216-19.136,4.48c-4.64,5.696-4.8,13.792-0.384,19.648l136.8,182.4
+            l-136.8,182.4c-4.416,5.856-4.256,13.984,0.352,19.648c3.104,3.872,7.744,5.952,12.448,5.952c2.272,0,4.544-0.48,6.688-1.472
+            l416-192c5.696-2.624,9.312-8.288,9.312-14.528S444.395,212.087,438.731,209.463z" />
+            </svg>
+        </div>
+        <div class="content-cart"></div>
+        <button id="order" type="button">Відправити замовлення</button>
+    </div>
+    <header id="header">
+        <div class="logo">
+            <a href="../index.html" class="header-logo">
+                <img src="../img/logo.jpg">
+            </a>
+        </div>
+        <div id="contacts">
+            <div class="contacts-div">
+                <p>Контакти:</p>
+                <p>(067)-98-27-930</p>
+            </div>
+            <div class="contacts-viber">
+                <p>(050)-85-36-938</p>
+                <p>(viber)</p>
+            </div>
+        </div>
+        <div class="siteName">
+            <p>Ідеал твоєї краси</p>
+        </div>
+        <div id="social">
+            <a href="#" class="facebook"><svg width="18" height="17" viewBox="0 0 18 17">
+                    <path d="M2.53018 16.776H8.16405V10.8126H6.13991V8.8467H8.16405V6.38928C8.16405 5.03425 9.29908 3.93187 10.6942 3.93187H13.2244V5.8978H11.2003C10.6422 5.8978 10.1882 6.33873 10.1882 6.88076V8.8467H13.1331L12.7957 10.8126H10.1882V16.776H14.7425C16.1377 16.776 17.2727 15.6736 17.2727 14.3185V2.45742C17.2727 1.10238 16.1377 0 14.7425 0H2.53018C1.13502 0 0 1.10238 0 2.45742V14.3185C0 15.6736 1.13502 16.776 2.53018 16.776ZM1.01207 2.45742C1.01207 1.64442 1.69311 0.982966 2.53018 0.982966H14.7425C15.5796 0.982966 16.2606 1.64442 16.2606 2.45742V14.3185C16.2606 15.1315 15.5796 15.793 14.7425 15.793H11.2003V11.7956H13.6531L14.3278 7.86373H11.2003V6.88076H14.2365V2.9489H10.6942C8.74099 2.9489 7.15198 4.49221 7.15198 6.38928V7.86373H5.12783V11.7956H7.15198V15.793H2.53018C1.69311 15.793 1.01207 15.1315 1.01207 14.3185V2.45742Z" fill="black" />
+                </svg>
+            </a>
+            <a href="#" class="instagram"><svg width="18" height="17" viewBox="0 0 18 17">
+                    <path d="M2.53018 16.776H14.7425C16.1377 16.776 17.2727 15.6736 17.2727 14.3185V2.45742C17.2727 1.10238 16.1377 0 14.7425 0H2.53018C1.13502 0 0 1.10238 0 2.45742V14.3185C0 15.6736 1.13502 16.776 2.53018 16.776ZM1.01207 2.45742C1.01207 1.64442 1.69311 0.982966 2.53018 0.982966H14.7425C15.5796 0.982966 16.2606 1.64442 16.2606 2.45742V14.3185C16.2606 15.1315 15.5796 15.793 14.7425 15.793H2.53018C1.69311 15.793 1.01207 15.1315 1.01207 14.3185V2.45742Z" fill="black" />
+                    <path d="M8.63635 12.8113C11.1476 12.8113 13.1907 10.827 13.1907 8.38798C13.1907 5.94899 11.1476 3.96463 8.63635 3.96463C6.12515 3.96463 4.08203 5.94899 4.08203 8.38798C4.08203 10.827 6.12515 12.8113 8.63635 12.8113ZM8.63635 4.9476C10.5896 4.9476 12.1786 6.49091 12.1786 8.38798C12.1786 10.2851 10.5896 11.8284 8.63635 11.8284C6.68311 11.8284 5.0941 10.2851 5.0941 8.38798C5.0941 6.49091 6.68311 4.9476 8.63635 4.9476Z" fill="black" />
+                    <path d="M13.4092 4.70905C14.2363 4.70905 14.9092 4.05548 14.9092 3.25218C14.9092 2.44888 14.2363 1.79532 13.4092 1.79532C12.5821 1.79532 11.9092 2.44888 11.9092 3.25218C11.9092 4.05548 12.5821 4.70905 13.4092 4.70905ZM13.4092 2.76656C13.6848 2.76656 13.9092 2.98446 13.9092 3.25218C13.9092 3.51991 13.6848 3.7378 13.4092 3.7378C13.1335 3.7378 12.9092 3.51991 12.9092 3.25218C12.9092 2.98446 13.1335 2.76656 13.4092 2.76656Z" fill="black" />
+                </svg>
+            </a>
+            <a href="#" class="viber">
+                <svg width="18" height="17" viewBox="-22 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m468.484375 180.707031c.003906-48.085937-18.84375-93.414062-53.066406-127.636719-34.222657-34.222656-79.550781-53.070312-127.640625-53.070312h-107.070313c-.003906 0-.003906 0-.003906 0-48.082031 0-93.414063 18.847656-127.632813 53.066406-34.222656 34.226563-53.070312 79.554688-53.070312 127.640625v84.164063c0 37.242187 11.359375 73.0625 32.851562 103.597656 18.960938 26.9375 44.460938 47.980469 74.191407 61.320312v48.34375c0 24.996094 13.996093 33.867188 25.980469 33.867188 8.5625 0 17.125-4.226562 25.460937-12.558594l53.859375-53.859375 75.4375-.003906c48.085938 0 93.414062-18.847656 127.636719-53.066406 34.222656-34.222657 53.070312-79.554688 53.070312-127.640625zm-180.703125 234.871094-81.648438.003906c-3.980468 0-7.792968 1.578125-10.605468 4.390625l-58.253906 58.253906c-.074219.078126-.152344.152344-.230469.226563 0-.105469 0-.214844 0-.320313v-58.355468c0-6.222656-3.839844-11.796875-9.652344-14.015625-58.25-22.226563-97.386719-78.847657-97.386719-140.890625v-84.164063c0-40.074219 15.726563-77.871093 44.28125-106.429687 28.554688-28.550782 66.347656-44.277344 106.421875-44.277344h107.070313c40.074218 0 77.871094 15.726562 106.425781 44.28125 28.558594 28.558594 44.285156 66.355469 44.28125 106.425781l.003906 84.164063c-.003906 83.101562-67.609375 150.707031-150.707031 150.707031zm0 0"/><path d="m274.132812 245.335938c-5.855468-5.859376-15.351562-5.859376-21.210937 0l-12.117187 12.113281-46.953126-46.949219 12.117188-12.113281c2.8125-2.8125 4.394531-6.628907 4.394531-10.609375 0-3.976563-1.582031-7.792969-4.394531-10.605469l-56.804688-56.804687c-2.8125-2.8125-6.625-4.394532-10.605468-4.394532-3.976563 0-7.792969 1.582032-10.605469 4.394532l-39.765625 39.765624c-21.503906 21.503907-21.503906 56.5.003906 78.015626l124.964844 124.972656c10.390625 10.386718 24.246094 16.105468 39.007812 16.105468 14.765626 0 28.621094-5.71875 39.011719-16.105468l39.765625-39.761719c2.8125-2.816406 4.394532-6.628906 4.394532-10.609375 0-3.976562-1.582032-7.792969-4.394532-10.605469zm-4.171874 96.566406c-4.722657 4.722656-11.042969 7.324218-17.796876 7.324218-6.753906 0-13.074218-2.601562-17.796874-7.324218l-124.960938-124.96875c-9.8125-9.8125-9.816406-25.78125-.003906-35.589844l29.15625-29.160156 35.589844 35.59375-12.117188 12.113281c-2.8125 2.8125-4.394531 6.628906-4.394531 10.605469 0 3.980468 1.582031 7.792968 4.394531 10.609375l68.164062 68.164062c5.859376 5.855469 15.355469 5.859375 21.214844 0l12.117188-12.113281 35.589844 35.589844zm0 0"/><path d="m237.882812 66.355469c-8.285156 0-15 6.714843-15 15 0 8.28125 6.714844 15 15 15 34.328126 0 66.605469 13.367187 90.878907 37.644531 24.277343 24.273438 37.644531 56.546875 37.644531 90.878906 0 8.28125 6.714844 15 15 15 8.28125 0 15-6.714844 15-15 0-42.34375-16.488281-82.152344-46.429688-112.09375-29.941406-29.941406-69.75-46.429687-112.09375-46.429687zm0 0"/><path d="m302.140625 224.875c0 8.28125 6.71875 15 15 15 8.285156 0 15-6.71875 15-15 0-51.972656-42.285156-94.253906-94.257813-94.253906-8.285156 0-15 6.714844-15 15s6.714844 15 15 15c35.433594 0 64.257813 28.824218 64.257813 64.253906zm0 0"/></svg>
+            </a>
+        </div>
+        <div class="cart">
+            <p>Кошик</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M10.975 8l.025-.5c0-.517-.067-1.018-.181-1.5h5.993l-.564 2h-5.273zm-2.475 10c-.828 0-1.5.672-1.5 1.5 0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm11.305-15l-3.432 12h-10.428l-.455-1.083c-.323.049-.653.083-.99.083-.407 0-.805-.042-1.191-.114l1.306 3.114h13.239l3.474-12h1.929l.743-2h-4.195zm-6.305 15c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm-4.5-10.5c0 2.485-2.018 4.5-4.5 4.5-2.484 0-4.5-2.015-4.5-4.5s2.016-4.5 4.5-4.5c2.482 0 4.5 2.015 4.5 4.5zm-2-.5h-2v-2h-1v2h-2v1h2v2h1v-2h2v-1z" /></svg>
+        </div>
+        <div class="search">
+            <div id="search_panel">
+                <input type="text" placeholder="Я шукаю">
+            </div>
+            <div id="search_button">
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <div class="left-menu">
+            <div class="nav-menu">
+                <div class="list-box">
+                    <div class="title-box main_flex__nowrap flex__align-items_center">
+                        <p>Парфуми</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" />
+                        </svg>
+                    </div>
+                    <div class="list-link">
+                        <nav>
+                            <li><a href="#">Жіночі</a></li>
+                            <li><a href="#">Чоловічі</a></li>
+                        </nav>
+                    </div>
+                </div>
+                <div class="list-box">
+                    <div class="title-box main_flex__nowrap flex__align-items_center">
+                        <p>Помади</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" />
+                        </svg>
+                    </div>
+                    <div class="list-link">
+                        <nav>
+                            <li><a href="#">Звичайні</a></li>
+                            <li><a href="#">Матові</a></li>
+                        </nav>
+                    </div>
+                </div>
+                <div class="list-box">
+                    <div class="title-box main_flex__nowrap flex__align-items_center">
+                        <p>Креми</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" />
+                        </svg>
+                    </div>
+                    <div class="list-link">
+                        <nav>
+                            <li><a href="#">Серія Hualaronic</a></li>
+                            <li><a href="#">Серія Dna-shot</a></li>
+                            <li><a href="#">Серія Pearl</a></li>
+                            <li><a href="#">Серія Olive</a></li>
+                            <li><a href="#">Серія Zen</a></li>
+                        </nav>
+                    </div>
+                </div>
+                <div class="list-box">
+                    <div class="title-box main_flex__nowrap flex__align-items_center">
+                        <p>Обличчя</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" />
+                        </svg>
+                    </div>
+                    <div class="list-link">
+                        <nav>
+                            <li><a href="#">Пудра</a></li>
+                            <li><a href="#">Румяна</a></li>
+                            <li><a href="#">Олівець для губ</a></li>
+                            <li><a href="#">Олівець для брів</a></li>
+                            <li><a href="#">Туш</a></li>
+                        </nav>
+                    </div>
+                </div>
+                <div class="list-box">
+                    <div class="title-box main_flex__nowrap flex__align-items_center">
+                        <p>Аксесуари</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" />
+                        </svg>
+                    </div>
+                    <div class="list-link">
+                        <nav>
+                            <li><a href="#">Косметички</a></li>
+                            <li><a href="#">Шапочки для голок</a></li>
+                            <li><a href="#">Чобітки</a></li>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-menu">
+            </div>
+        </div>
+        <div class="content">
+            <div class="product-block">
+                <a class="list-product">
+                    <div class="product">
+                        <div class="img-prodct">
+                            <img src="../img/cosmetic_bag/1.jpg" alt="Product 1">
+                        </div>
+                        <h2>Косметичка</h2>
+                        <p class="price">100 грн.</p>
+                    </div>
+                </a>
+                <a class="list-product">
+                    <div class="product">
+                        <div class="img-prodct">
+                            <img src="../img/cosmetic_bag/2.jpg" alt="Product 2">
+                        </div>
+                        <h2>Косметичка</h2>
+                        <p class="price">100 грн.</p>
+                    </div>
+                </a>
+                <a class="list-product">
+                    <div class="product">
+                        <div class="img-prodct">
+                            <img src="../img/cosmetic_bag/3.jpg" alt="Product 3">
+                        </div>
+                        <h2>Косметичка</h2>
+                        <p class="price">100 грн.</p>
+                    </div>
+                </a>
+                <a class="list-product">
+                    <div class="product">
+                        <div class="img-prodct">
+                            <img src="../img/cosmetic_bag/4.jpg" alt="Product 4">
+                        </div>
+                        <h2>Косметичка</h2>
+                        <p class="price">100 грн.</p>
+                    </div>
+                </a>
+                <a class="list-product">
+                    <div class="product">
+                        <div class="img-prodct">
+                            <img src="../img/cosmetic_bag/5.jpg" alt="Product 5">
+                        </div>
+                        <h2>Косметичка</h2>
+                        <p class="price">100 грн.</p>
+                    </div>
+                </a>
+                <a class="list-product">
+                    <div class="product">
+                        <div class="img-prodct">
+                            <img src="../img/cosmetic_bag/6.jpg" alt="Product 6">
+                        </div>
+                        <h2>Косметичка</h2>
+                        <p class="price">100 грн.</p>
+                    </div>
+                </a>
+                <a class="list-product">
+                    <div class="product">
+                        <div class="img-prodct">
+                            <img src="../img/cosmetic_bag/7.jpg" alt="Product 7">
+                        </div>
+                        <h2>Косметичка</h2>
+                        <p class="price">100 грн.</p>
+                    </div>
+                </a>
+                <a class="list-product">
+                    <div class="product">
+                        <div class="img-prodct">
+                            <img src="../img/cosmetic_bag/8.jpg" alt="Product 8">
+                        </div>
+                        <h2>Косметичка</h2>
+                        <p class="price">100 грн.</p>
+                    </div>
+                </a>
+                <a class="list-product">
+                    <div class="product">
+                        <div class="img-prodct">
+                            <img src="../img/cosmetic_bag/9.jpg" alt="Product 9">
+                        </div>
+                        <h2>Косметичка</h2>
+                        <p class="price">100 грн.</p>
+                    </div>
+                </a>
+                <a class="list-product">
+                    <div class="product">
+                        <div class="img-prodct">
+                            <img src="../img/cosmetic_bag/10.jpg" alt="Product 10">
+                        </div>
+                        <h2>Косметичка</h2>
+                        <p class="price">100 грн.</p>
+                    </div>
+                </a>
+                <a class="list-product">
+                    <div class="product">
+                        <div class="img-prodct">
+                            <img src="../img/cosmetic_bag/11.jpg" alt="Product 11">
+                        </div>
+                        <h2>Косметичка</h2>
+                        <p class="price">100 грн.</p>
+                    </div>
+                </a>
+                <a class="list-product">
+                    <div class="product">
+                        <div class="img-prodct">
+                            <img src="../img/cosmetic_bag/12.jpg" alt="Product 12">
+                        </div>
+                        <h2>Косметичка</h2>
+                        <p class="price">100 грн.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p class="left-contact__info">Контактна інформація</p>
+                <p>(050)-85-36-938</p>
+                <p>(067)-98-27-930</p>
+                <p>moskal_tatiana@gmail.com</p>
+            </div>
+            <div class="footer-center">
+                <picture>
+                    <img class="footer-img" width="800" height="200" src="https://discover.dhl.com/etc.clientlibs/dhl/clientlibs/clientlib-animatedpages/resources/img/animated5/cosmeticGif.gif">
+                </picture>
+            </div>
+            <div class="footer-right">
+                <p class="right-contact__info">Швидкі посилання</p>
+                <p>Обслуговування клієнтів</p>
+                <p>Обслуговування клієнтів</p>
+                <p>Обслуговування клієнтів</p>
+    </footer>
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+
+</html>

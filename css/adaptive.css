@@ -1,0 +1,226 @@
+@media screen and (min-width: 575px) {}
+
+/*========================= 1200px ============================*/
+@media screen and (min-width: 1200px) {
+    /*    .container {
+        width: 1140px;
+    }
+*/
+
+}
+
+/*========================= 991px - 1199px ============================*/
+@media screen and (max-width: 1199px) {
+    /*    .container {
+        width: 960px;
+    }
+*/
+}
+
+/*========================= 767px - 991px ============================*/
+@media screen and (max-width: 991px) {
+    /*    .container {
+        width: 720px;
+    }
+*/
+}
+
+/*========================= 575px - 767px ============================*/
+@media screen and (max-width: 767px) {
+    .contacts-div {
+        flex-direction: column;
+        line-height: 0em;
+    }
+
+    .contacts-div p {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    .contacts-viber {
+        margin-left: 0px;
+    }
+
+    .contacts-viber p {
+        font-size: 12px;
+    }
+
+    #contacts .email {
+        font-size: 12px;
+        margin-bottom: -25px;
+    }
+
+    .banner img {
+        width: 70.4vw;
+        height: 30vw;
+        margin-bottom: 1.5vw;
+    }
+
+    .product-block {
+        display: grid;
+        column-gap: 1px;
+        grid-row-gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+
+    .list-product {
+        width: 245px;
+        height: 390px;
+        background-color: #fff;
+        border-radius: 10px;
+        border: 1px solid black;
+    }
+
+    .list-product img {
+        padding: 20px;
+        width: 210px;
+        height: 210px;
+    }
+
+    .left-menu {
+        width: 15%;
+        height: auto;
+        margin-left: 5vw;
+    }
+}
+
+/*========================= 0px - 575px ============================*/
+@media screen and (max-width: 575px) {
+    #header {
+        /*position: relative;*/
+        height: 16vh;
+    }
+
+    .logo a img {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+        margin-top: -35px;
+    }
+
+    #contacts {
+        display: none;
+    }
+
+    .siteName {
+        font-size: 20px;
+        margin-left: 30vw;
+        margin-bottom: -20px;
+    }
+
+    #search_panel {
+        display: none;
+    }
+
+    #social {
+        display: none;
+    }
+
+    .cart {
+        display: none;
+        width: 40px;
+        height: 20px;
+        margin-left: 85%;
+    }
+
+    .cart p {
+        font-size: 8px;
+    }
+
+    .cart svg {
+        width: 20px;
+        height: 15px;
+    }
+    /*=================================== Burger =====================================*/
+    .burger {
+        position: relative;
+        display: block;
+        width: 30px;
+        height: 20px;
+        right: 10px;
+        /*border: 1px solid black;*/
+    }
+
+    .burger:before,
+    .burger:after {
+        position: absolute;
+        content: '';
+        background-color: #fff;
+        width: 100%;
+        height: 2px;
+    }
+
+    .burger:before {
+        top: 1px;
+    }
+
+    .burger:after {
+        bottom: 1px;
+    }
+
+    .burger span {
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+    }
+
+    .burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .burger.active span {
+        display: none;
+    }
+
+    .burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    /*================================================================================*/
+
+    .banner img {
+        width: 92%;
+    }
+
+
+    .footer-container {
+        height: 30vw;
+    }
+
+    .footer-container {
+        display: flex;
+        width: 100%;
+        height: 14.6vw;
+        background-color: #ccc;
+        color: #000;
+        justify-content: space-between;
+    }
+
+    .footer-left {
+        margin-top: 2.25vw;
+        margin-left: 3.75vw;
+    }
+
+    .footer-left p {
+        display: none;
+    }
+
+    .footer-img {
+        width: 50vw;
+        height: 14.6vw;
+    }
+
+    .footer-right {
+        margin-top: 2.25vw;
+        margin-right: 3vw;
+    }
+
+    .footer-right p {
+        display: none;
+    }
+}
